@@ -1,6 +1,9 @@
 # Placeholder Gradle Plugin
 A gradle plugin that replaces transform the final output jar, and apply custom placeholders defined in build script.
 
+> :warning: You should **NOT** use this Gradle Plugin! This is a Gradle Plugin for me to learn how you make a gradle 
+> plugin. Well, if you want to read the code and see how it works, then sure I guess.
+
 ## Source
 This is a project originally made for an organization named "Dragon Commissions". I'm the developer of
 it, and I feel like making it public is a good idea.
@@ -94,6 +97,11 @@ public class Main {
         String prefix = "PlaceHolder.";
         System.out.println("[BAD EXAMPLE] Build Time: %" + prefix + "BuildUnixTime%");
     }
+    
+    // BAD EXAMPLE:
+    // You must put it in a method. Putting it as a field value won't work
+    public static final String BAD_EXAMPLE_BUILD_TIME = "%PlaceHolder.BuildUnixTime%";
+    
 }
 ```
 
